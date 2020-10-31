@@ -1,0 +1,50 @@
+{
+  "name": "gabrielzzarate.me",
+  "version": "1.0.0",
+  "description": "Gabriel Zarate's blog site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
+    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "netlify": "netlify dev",
+    "prebuild": "netlify-lambda install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielzzarate/gabrielzzarate.com.git"
+  },
+  "keywords": [
+    "gatsby",
+    "blog",
+    "react"
+  ],
+  "author": "Gabriel Zarate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielzzarate/gabrielzzarate.com/issues"
+  },
+  "homepage": "https://github.com/gabrielzzarate/gabrielzzarate.com#readme",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.24.91",
+    "gatsby-image": "^2.4.21",
+    "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-styled-components": "^3.3.14",
+    "isomorphic-fetch": "^3.0.0",
+    "netlify-cli": "^2.67.0",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25"
+  }
+}
