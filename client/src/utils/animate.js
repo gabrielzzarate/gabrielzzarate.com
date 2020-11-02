@@ -5,26 +5,27 @@ import * as targets from './animation-targets';
 const timelineAboutSection = new TimelineMax({ onComplete: cb });
 
 export default {
-	// transitionSidebar(colorPanel, mainPanel){
-	// 	var timelineSidebar = new TimelineMax({ onComplete: cb });
-	// 	return timelineSidebar
-	// 		.duration(colorPanel, 1.2, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeInOut }, 0)
-	// 		.duration(mainPanel, 1.2, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeInOut }, .1);
-	// },
-	// transitionMain(colorPanel, mainPanel){
-	// 	var timelineMain = new TimelineMax({ onComplete: cb });
-	// 	return timelineMain
-	// 		.duration(colorPanel, 1.2, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeInOut }, 0)
-	// 		.duration(mainPanel, 1.2, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeInOut }, .1);
-	// },
+	transitionSidebar(colorPanel, mainPanel){
+		var timelineSidebar = new TimelineMax({ onComplete: cb });
+		return timelineSidebar
+			.duration(colorPanel, 1.2, {
+				scaleX: 1,
+				ease: Expo.easeInOut }, 0)
+			.duration(mainPanel, 1.2, {
+				scaleX: 1,
+				ease: Expo.easeInOut }, .1);
+	},
+	transitionMain(colorPanel, mainPanel){
+		console.log('running', colorPanel, mainPanel);
+		var timelineMain = new TimelineMax({ onComplete: cb });
+		return timelineMain
+			.duration(colorPanel, 1.2, {
+				scaleX: 1,
+				ease: Expo.easeInOut }, 0)
+			.duration(mainPanel, 1.2, {
+				scaleX: 1,
+				ease: Expo.easeInOut }, .1);
+	},
 	// animateAboutStart(colorPanel, mainPanel, intro){
 	// 	var timeline = new TimelineMax({ onComplete: cb });
 	// 	return timeline

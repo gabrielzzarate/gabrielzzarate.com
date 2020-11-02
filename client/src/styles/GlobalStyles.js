@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 2rem;
+		min-height: 100vh;
+	 	overflow-y: auto;
+	 	overflow-x: hidden;
+		height: 100%;
   }
 
   fieldset {
@@ -43,29 +47,6 @@ const GlobalStyles = createGlobalStyle`
     image-rendering: pixelated;
   }
 
-  /* Scrollbar Styles */
-  body::-webkit-scrollbar {
-    width: 12px;
-  }
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--red) var(--white);
-  }
-  body::-webkit-scrollbar-track {
-    background: var(--white);
-  }
-  body::-webkit-scrollbar-thumb {
-    background-color: var(--red) ;
-    border-radius: 6px;
-    border: 3px solid var(--white);
-  }
-
-  hr {
-    border: 0;
-    height: 8px;
-    background-size: 1500px;
-  }
-
   img {
     max-width: 100%;
   }
@@ -76,6 +57,15 @@ const GlobalStyles = createGlobalStyle`
     display: inline-block;
   }
 
+// layout
+
+section {
+	padding: 60px 48px;
+
+	@media screen and (max-width: 450px) {
+		padding: 20px 15px;
+	}
+}
 
 @keyframes modal-rise {
   0%   { opacity:0; transform:translateY(100px); -webkit-transform:translateY(100px); }

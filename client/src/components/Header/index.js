@@ -16,7 +16,7 @@ const HeaderStyles = styled.header`
 	a {
 		color: var(--black);
 		text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 1rem;
 		letter-spacing: .8px;
 		transition: color .25s ease-in;
 
@@ -30,20 +30,18 @@ const HeaderStyles = styled.header`
 	}
 `;
 
-function playHomeAnimation() {
-  return null;
-}
+// function playHomeAnimation() {
+//   return null;
+// }
 
 export default function Header() {
 
   return (
     <HeaderStyles>
       <CSSTransition
-        transitionName="navigation"
-        transitionAppear={true}
-        transitionAppearTimeout={1000}
-        transitionEnterTimeout={0}
-        transitionLeaveTimeout={0}
+        classNames="navigation"
+        timeout={4000}
+        in={true}
       > 
       <>
         <Link className="nav-link" to="/">Home</Link>
