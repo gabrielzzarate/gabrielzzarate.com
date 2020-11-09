@@ -6,6 +6,7 @@ import 'normalize.css';
 import Header from '../Header';
 import GlobalStyles from '../../styles/GlobalStyles';
 import Typography from '../../styles/Typography';
+import Footer from '../Footer';
 
 const SiteBorderStyles = styled.div`
   /* max-width: 1000px;
@@ -38,6 +39,7 @@ export default function Layout({ children }) {
 				<ContentStyles>
 					{children}
 				</ContentStyles>
+        <Footer />
 			</SiteBorderStyles>
 		</>
 	);

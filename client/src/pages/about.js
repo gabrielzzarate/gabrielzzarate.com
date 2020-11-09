@@ -1,14 +1,17 @@
 import React from 'react';
+import ArticleList from '../components/ArticleList';
+import Nav from '../components/Nav';
 import PageWrapper from '../components/PageWrapper';
 
 function About() {
 
   return (
-    <PageWrapper>
+    <>
+      {/* <Nav /> */}
       <section>
-        <h1>About</h1>
+        <ArticleList />
       </section>
-    </PageWrapper>
+    </>
   )
 }
 

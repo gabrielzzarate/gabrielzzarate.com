@@ -1,30 +1,46 @@
 import { TimelineMax, Expo } from 'gsap';
-import * as targets from './animation-targets';
+// import * as targets from './animation-targets';
 
 
 const timelineAboutSection = new TimelineMax({ onComplete: cb });
 
 export default {
 	transitionSidebar(colorPanel, mainPanel){
-		var timelineSidebar = new TimelineMax({ onComplete: cb });
-		return timelineSidebar
-			.duration(colorPanel, 1.2, {
-				scaleX: 1,
-				ease: Expo.easeInOut }, 0)
-			.duration(mainPanel, 1.2, {
-				scaleX: 1,
-				ease: Expo.easeInOut }, .1);
+		// var timelineSidebar = new TimelineMax({ onComplete: cb });
+
+		return null;
+		// return timelineSidebar
+		// 	.duration(colorPanel, 1.2, {
+		// 		scaleX: 1,
+		// 		ease: Expo.easeInOut }, 0)
+		// 	.duration(mainPanel, 1.2, {
+		// 		scaleX: 1,
+		// 		ease: Expo.easeInOut }, .1);
 	},
 	transitionMain(colorPanel, mainPanel){
-		console.log('running', colorPanel, mainPanel);
 		var timelineMain = new TimelineMax({ onComplete: cb });
+		// .duration(colorPanel, 1.2, {
+		// 	scaleX: 1,
+		// 	ease: Expo.easeInOut }, 0)
+		// .duration(mainPanel, 1.2, {
+		// 	scaleX: 1,
+		// 	ease: Expo.easeInOut }, .1);
+
+
 		return timelineMain
-			.duration(colorPanel, 1.2, {
+			.staggerFromTo(colorPanel, 1.2, {
+				scaleX: 0,
+			}, {
 				scaleX: 1,
-				ease: Expo.easeInOut }, 0)
-			.duration(mainPanel, 1.2, {
+				ease: Expo.easeInOut
+			}, 0, 1.8)
+			.staggerFromTo(mainPanel, 1.2, {
+				scaleX: 0
+			}, {
 				scaleX: 1,
-				ease: Expo.easeInOut }, .1);
+				ease: Expo.easeInOut
+			}, .1, 2.5);
+
 	},
 	// animateAboutStart(colorPanel, mainPanel, intro){
 	// 	var timeline = new TimelineMax({ onComplete: cb });
@@ -114,7 +130,7 @@ export default {
 
 	// },
 	animateHome(heading, line){
-		const timelineHome = new TimelineMax({ onComplete: cb });
+		const timelineHome = new TimelineMax({ onComplete: cbHome });
 
 		return timelineHome
 			// .staggerFromTo(targets.cardOne, 2, {
@@ -166,9 +182,11 @@ export default {
 	}
 }
 
-// timeline onComplete callbacks
-function cb(){
-	//console.log('transition complete');
+function cbHome() {
+	console.log('home animation done')
 }
-
+// timeline onComplete callbacks
+function cb(props){
+	console.log('transition complete', props);
+}
 

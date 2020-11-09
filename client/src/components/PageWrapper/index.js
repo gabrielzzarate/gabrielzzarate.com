@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import animate from '../../utils/animate';
 import isServer from '../../utils/isServer';
 import Sidebar from '../Sidebar';
+import ArticleList from '../ArticleList';
 
 const PageWrapperStyles = styled.div`
   display: flex;
@@ -11,17 +12,17 @@ const PageWrapperStyles = styled.div`
 
   main {
     width: 75%;
+    position: relative;
   }
 `;
 
 export default function PageWrapper({ children }) {
   // const animatedLayerOne = useRef(null);
   // const animatedLayerTwo = useRef(null);
+  const animatedLayerOne = document.getElementsByClassName('background-piece-right-color');
+  const animatedLayerTwo = document.getElementsByClassName('background-piece-right-main');
   useEffect(() => {
     // animate.animateHome();
-
-    const animatedLayerOne = document.getElementsByClassName('background-piece-right-color');
-    const animatedLayerTwo = document.getElementsByClassName('background-piece-right-main');
     animate.transitionMain(animatedLayerOne, animatedLayerTwo);
   }, []);
 
@@ -34,14 +35,17 @@ export default function PageWrapper({ children }) {
           classNames="change-view"
           timeout={200}
         >
-          {children}          
+          <>
+          {children}
+          <ArticleList />          
+          </>
         </CSSTransition>
 
-        <div className="main-background">
-          <div className="background-piece background-piece-right-color"></div>
-          <div className="background-piece background-piece-right-main"></div>
-        </div>
       </main>
+      <div className="main-background">
+        <div className="background-piece background-piece-right-color"></div>
+        <div className="background-piece background-piece-right-main"></div>
+      </div>
     </PageWrapperStyles>
   )
 

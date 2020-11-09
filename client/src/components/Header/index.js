@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
+import Nav from '../Nav';
 
 const HeaderStyles = styled.header`
-  position: absolute;
+  /* position: absolute;
 	left: 45px;
-	top: 45px;
+	top: 45px; */
 
 	/* @include tablet-small {
 		left: 30px;
@@ -16,7 +17,7 @@ const HeaderStyles = styled.header`
 	a {
 		color: var(--black);
 		text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.25rem;
 		letter-spacing: .8px;
 		transition: color .25s ease-in;
 
@@ -44,8 +45,9 @@ export default function Header() {
         in={true}
       > 
       <>
-        <Link className="nav-link" to="/">Home</Link>
-        <Link className="nav-link" to="/about">About</Link>
+        {/* <Link className="nav-link" to="/">Home</Link>
+        <Link className="nav-link" to="/about">About</Link> */}
+				<Nav />
       </>
       </CSSTransition>
     </HeaderStyles>

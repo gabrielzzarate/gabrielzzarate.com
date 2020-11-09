@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
+const colors = ['#f1eee5', '#eeefe8'];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
 const GlobalStyles = createGlobalStyle`
   :root {
     --red: #FF4949;
@@ -19,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
 	 	overflow-y: auto;
 	 	overflow-x: hidden;
 		height: 100%;
+		background-color: ${randomColor};
   }
 
   fieldset {
@@ -203,7 +207,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .background-piece {
@@ -722,8 +726,6 @@ section {
     opacity: 1;
     transition-delay: .54s;
 }
-
-
 `;
 
 export default GlobalStyles;
