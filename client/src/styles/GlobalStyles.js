@@ -1,7 +1,41 @@
 import { createGlobalStyle } from 'styled-components';
 
-const colors = ['#f1eee5', '#eeefe8'];
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
+// const colors = ['#f1eee5', '#eeefe8', '#f5f0e', '#f3eee', '#f3eeed', '#eef1ef'];
+
+const palettes = [
+	{
+		background: '#eef1ef',
+		text: '#665d79',
+		accentText: '#7eae8e',
+		accent: '#fa7538',
+	},
+	{
+		background: '#eaeff1',
+		text: '#6b4d47',
+		accentText: '#6f939f',
+		accent: '#f66',
+	},
+	{
+		background: '#eeefe7',
+		text: '#614e65',
+		accentText: '#919749',
+		accent: '#614e65',
+	},
+	{
+		background: '#f5f0e0',
+		text: '#74586a',
+		accentText: '#bf986e',
+		accent: '#ed6e87',
+	},
+	{
+		background: '#e0d7cc',
+		text: '#74586a',
+		accentText: '#bf986e',
+		accent: "#f4a4b4",
+	}
+];
+const randomPalette = palettes[Math.floor(Math.random() * palettes.length)];
+// const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -11,18 +45,21 @@ const GlobalStyles = createGlobalStyle`
 		--ltgrey: #787878;
     --white: #fff;
     --grey: #788891;
+		--background: ${randomPalette.background};
+		--text: ${randomPalette.text};
+		--accent: ${randomPalette.accent};
+		--accent-text: ${randomPalette.accentText};
+		--heading-font: Ciutadella;
+		--body-font: 'Freight Text Pro';
+		--mobile: '480px';
   }
-  html {
-    font-size: 10px;
-  }
-
   body {
-    font-size: 2rem;
 		min-height: 100vh;
 	 	overflow-y: auto;
 	 	overflow-x: hidden;
 		height: 100%;
-		background-color: ${randomColor};
+		background-color: var(--background);
+		color: var(--text);
   }
 
   fieldset {
@@ -31,7 +68,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background: var(--red);
+    background: var(--black);
     color: white;
     border: 0;
     padding: 0.6rem 1rem;
@@ -63,11 +100,26 @@ const GlobalStyles = createGlobalStyle`
 
 // layout
 
+article {
+
+	h2 {
+		margin-top: 20px;
+	}
+}
+
+.postDate {
+	text-transform: uppercase;
+	display: block;
+	color: var(--accent-text);
+	font-size: 1.8rem;
+	line-height: 1rem;
+}
+
 section {
-	padding: 60px 48px;
+	padding: 60px 0;
 
 	@media screen and (max-width: 450px) {
-		padding: 20px 15px;
+		padding: 20px 0;
 	}
 }
 
@@ -207,7 +259,7 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  /* z-index: -1; */
+  z-index: -1;
 }
 
 .background-piece {

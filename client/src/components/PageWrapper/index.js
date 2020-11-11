@@ -1,44 +1,38 @@
 import React, { useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import animate from '../../utils/animate';
-import isServer from '../../utils/isServer';
-import Sidebar from '../Sidebar';
-import ArticleList from '../ArticleList';
+// import animate from '../../utils/animate';
+// import isServer from '../../utils/isServer';
+// import Sidebar from '../Sidebar';
+// import ArticleList from '../ArticleList';
 
 const PageWrapperStyles = styled.div`
-  display: flex;
-  height: 100vh;
 
   main {
-    width: 75%;
-    position: relative;
+    width: 100%;
   }
 `;
 
 export default function PageWrapper({ children }) {
   // const animatedLayerOne = useRef(null);
   // const animatedLayerTwo = useRef(null);
-  const animatedLayerOne = document.getElementsByClassName('background-piece-right-color');
-  const animatedLayerTwo = document.getElementsByClassName('background-piece-right-main');
+  // const animatedLayerOne = document.getElementsByClassName('background-piece-right-color');
+  // const animatedLayerTwo = document.getElementsByClassName('background-piece-right-main');
   useEffect(() => {
     // animate.animateHome();
-    animate.transitionMain(animatedLayerOne, animatedLayerTwo);
+    // animate.transitionMain(animatedLayerOne, animatedLayerTwo);
   }, []);
 
   return (
     <PageWrapperStyles>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <main>
         <CSSTransition
           in={true}
           classNames="change-view"
           timeout={200}
         >
-          <>
-          {children}
-          <ArticleList />          
-          </>
+          {children}         
         </CSSTransition>
 
       </main>

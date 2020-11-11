@@ -1,32 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'normalize.css';
-// import Footer from './Footer';
-// import Nav from './Nav';
 import Header from '../Header';
 import GlobalStyles from '../../styles/GlobalStyles';
 import Typography from '../../styles/Typography';
 import Footer from '../Footer';
 
-const SiteBorderStyles = styled.div`
-  /* max-width: 1000px;
-  margin: 12rem auto 4rem auto;
-  margin-top: clamp(2rem, 10vw, 12rem);
-  background-size: 1500px;
-  padding: 5px;
-  padding: clamp(5px, 1vw, 25px);
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.044);
-  border: 5px solid white;
-
-  @media (max-width: 1100px) {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  } */
-`;
-
 const ContentStyles = styled.div`
-  /* background: white;
-  padding: 2rem; */
+  min-height: 80vh;
+  flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1350px) {
+    max-width: 800px;
+  }
+
+  @media screen and (max-width: 800px) {
+    max-width: 600px;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 0 1.5rem;
+  } 
 `;
 
 export default function Layout({ children }) {
@@ -34,13 +30,11 @@ export default function Layout({ children }) {
 		<>
 			<GlobalStyles />
 			<Typography />
-			<SiteBorderStyles>
-        <Header />
 				<ContentStyles>
+          <Header />
 					{children}
 				</ContentStyles>
         <Footer />
-			</SiteBorderStyles>
 		</>
 	);
 }

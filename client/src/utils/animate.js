@@ -1,5 +1,5 @@
 import { TimelineMax, Expo } from 'gsap';
-// import * as targets from './animation-targets';
+import * as targets from './animation-targets';
 
 
 const timelineAboutSection = new TimelineMax({ onComplete: cb });
@@ -42,79 +42,82 @@ export default {
 			}, .1, 2.5);
 
 	},
-	// animateAboutStart(colorPanel, mainPanel, intro){
-	// 	var timeline = new TimelineMax({ onComplete: cb });
-	// 	return timeline
-	// 		.duration(colorPanel, 1.2, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeInOut }, .0)
-	// 		.duration(mainPanel, 1.2, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeInOut }, .1)
-	// 		.staggerFromTo(intro, 2, {
-	// 			autoAlpha: 0,
-	// 			y: 30
-	// 		}, {
-	// 			autoAlpha: 1,
-	// 			y: 0,
-	// 			ease: Expo.easeOut
-	// 		}, 0, 2);
-	// },
-	// animateAboutSection(){
-	// 	return timelineAboutSection
-	// 		.staggerFromTo(targets.heading, 2, {
-	// 			autoAlpha: 0,
-	// 			y: 30
-	// 		}, {
-	// 			autoAlpha: 1,
-	// 			y: 0,
-	// 			ease: Expo.easeOut
-	// 		}, 0)
-	// 		.fromTo(targets.aboutLine, 1.8, {
-	// 			scaleX: 0
-	// 		}, {
-	// 			scaleX: 1,
-	// 			ease: Expo.easeOut
-	// 		}, .2);
-	// },
-	// animateSubSectionSkills(tl){
-	// 	return tl
-	// 		.fromTo(targets.subSectionSkills, 1.2, {
-	// 			autoAlpha: 0,
-	// 			y: 30
-	// 		}, {
-	// 			autoAlpha: 1,
-	// 			y: 0,
-	// 			ease: Expo.easeOut
-	// 		}, 0)
-	// 		.staggerFromTo(targets.skillsListItem, 1.2, {
-	// 			autoAlpha: 0,
-	// 			y: 30
-	// 		}, {
-	// 			autoAlpha: 1,
-	// 			y: 0,
-	// 			ease: Expo.easeOut
-	// 		}, .05, .1);
-	// },
-	// animateSubSectionTech(tl){
-	// 	return tl
-	// 		.fromTo(targets.subSectionTech, 1.2, {
-	// 			autoAlpha: 0,
-	// 			y: 30
-	// 		}, {
-	// 			autoAlpha: 1,
-	// 			y: 0,
-	// 			ease: Expo.easeOut
-	// 		}, 0)
-	// 		.staggerFromTo(targets.techListItem, 1.2, {
-	// 			autoAlpha: 0,
-	// 			y: 30
-	// 		}, {
-	// 			autoAlpha: 1,
-	// 			y: 0,
-	// 			ease: Expo.easeOut
-	// 		}, .05, .1);
-	// },
+	animateAboutStart(introOne, introTwo){
+		var timeline = new TimelineMax({ onComplete: cb });
+		return timeline
+			.staggerFromTo(introOne, 2, {
+				autoAlpha: 0,
+				y: 30
+			}, {
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut
+			}, 0);
+			// .staggerFromTo(introTwo, 2, {
+			// 	autoAlpha: 0,
+			// 	y: 30
+			// }, {
+			// 	autoAlpha: 1,
+			// 	y: 0,
+			// 	ease: Expo.easeOut
+			// }, 0);
+			
+	},
+	animateAboutSection(){
+		return timelineAboutSection
+			.staggerFromTo(targets.heading, 2, {
+				autoAlpha: 0,
+				y: 30
+			}, {
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut
+			}, 0.5)
+			.fromTo(targets.aboutLine, 1.8, {
+				scaleX: 0
+			}, {
+				scaleX: 1,
+				ease: Expo.easeOut
+			}, .2);
+	},
+	animateSubSectionSkills(tl){
+		return tl
+			.fromTo(targets.subSectionSkills, 1.2, {
+				autoAlpha: 0,
+				y: 30
+			}, {
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut
+			}, 0)
+			.staggerFromTo(targets.skillsListItem, 1.2, {
+				autoAlpha: 0,
+				y: 30
+			}, {
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut
+			}, .05, .1);
+	},
+	animateSubSectionTech(tl){
+		return tl
+			.fromTo(targets.subSectionTech, 1.2, {
+				autoAlpha: 0,
+				y: 30
+			}, {
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut
+			}, 0)
+			.staggerFromTo(targets.techListItem, 1.2, {
+				autoAlpha: 0,
+				y: 30
+			}, {
+				autoAlpha: 1,
+				y: 0,
+				ease: Expo.easeOut
+			}, .05, .1);
+	},
 	// animateProjectEnter(){
 	// 	const timelineProject = new TimelineMax({ onComplete: cb });
 

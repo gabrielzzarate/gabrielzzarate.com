@@ -15,18 +15,14 @@ const HeaderStyles = styled.header`
 	} */
 
 	a {
-		color: var(--black);
+		font-family: var(--heading-font);
 		text-transform: uppercase;
-    font-size: 1.25rem;
 		letter-spacing: .8px;
+    font-size: 0.75rem;
 		transition: color .25s ease-in;
 
 		&:first-of-type {
 			padding-right: 15px;
-		}
-
-		&:hover {
-			color: var(--ltgrey);
 		}
 	}
 `;

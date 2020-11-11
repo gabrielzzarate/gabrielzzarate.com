@@ -2,13 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeadingStyles = styled.div`
-  visibility: hidden;
-	opacity: 0;
+  /* visibility: hidden;
+	opacity: 0; */
 
 	.section-title {
 		display: inline-block;
-	    width: 40%;
-	    font-size: 2.6rem;
+	    width: 35%;
 	    transform-origin: center left 0;
 
 	    /* @include desktop-small {
@@ -32,11 +31,11 @@ const HeadingStyles = styled.div`
 
 	.section-line {
 		display: inline-block;
-		width: 60%;
+		width: 65%;
 		height: 1px;
-		background: #ddd;
-		transform-origin: top left;
-		transform: scaleX(0);
+		background: var(--text);
+		/* transform-origin: top left; */
+		/* transform: scaleX(0); */
 
 		/* @include tablet-small {
 			width: 100%;
@@ -48,7 +47,7 @@ export default function Heading({ children }) {
 
   return (
     <HeadingStyles className="section-head">
-      <h2 className="section-title">{children}</h2>
+      <h1 className="section-title">{children}</h1>
       <span className="section-line" />
     </HeadingStyles>
   )
