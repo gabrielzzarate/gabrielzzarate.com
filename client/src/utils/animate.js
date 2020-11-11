@@ -1,5 +1,4 @@
 import { TimelineMax, Expo } from 'gsap';
-import * as targets from './animation-targets';
 
 
 const timelineAboutSection = new TimelineMax({ onComplete: cb });
@@ -63,9 +62,9 @@ export default {
 			// }, 0);
 			
 	},
-	animateAboutSection(){
+	animateAboutSection(heading, line){
 		return timelineAboutSection
-			.staggerFromTo(targets.heading, 2, {
+			.staggerFromTo(heading, 2, {
 				autoAlpha: 0,
 				y: 30
 			}, {
@@ -73,16 +72,16 @@ export default {
 				y: 0,
 				ease: Expo.easeOut
 			}, 0.5)
-			.fromTo(targets.aboutLine, 1.8, {
+			.fromTo(line, 1.8, {
 				scaleX: 0
 			}, {
 				scaleX: 1,
 				ease: Expo.easeOut
 			}, .2);
 	},
-	animateSubSectionSkills(tl){
+	animateSubSectionSkills(tl, section, item){
 		return tl
-			.fromTo(targets.subSectionSkills, 1.2, {
+			.fromTo(section, 1.2, {
 				autoAlpha: 0,
 				y: 30
 			}, {
@@ -90,7 +89,7 @@ export default {
 				y: 0,
 				ease: Expo.easeOut
 			}, 0)
-			.staggerFromTo(targets.skillsListItem, 1.2, {
+			.staggerFromTo(item, 1.2, {
 				autoAlpha: 0,
 				y: 30
 			}, {
@@ -99,9 +98,9 @@ export default {
 				ease: Expo.easeOut
 			}, .05, .1);
 	},
-	animateSubSectionTech(tl){
+	animateSubSectionTech(tl, section, item){
 		return tl
-			.fromTo(targets.subSectionTech, 1.2, {
+			.fromTo(section, 1.2, {
 				autoAlpha: 0,
 				y: 30
 			}, {
@@ -109,7 +108,7 @@ export default {
 				y: 0,
 				ease: Expo.easeOut
 			}, 0)
-			.staggerFromTo(targets.techListItem, 1.2, {
+			.staggerFromTo(item, 1.2, {
 				autoAlpha: 0,
 				y: 30
 			}, {

@@ -201,16 +201,16 @@ function AboutSubSectionSkills(props) {
 
 function AboutGear(props) {
 	return (
-		<div className="sub-section flex-row sub-about">
+		<div className="sub-section flex-row sub-gear">
 			<h3 className="flex-col flex-forty sub-section-title">Favorite Gear</h3>
 			<div className="flex-col flex-sixty sub-section-list">
-				<span className="sub-section-list-item skills-item">
+				<span className="sub-section-list-item gear-item">
 					Fujifilm XT3
 				</span>
-				<span className="sub-section-list-item skills-item">
+				<span className="sub-section-list-item gear-item">
 					Novelkeys NK65
 				</span>
-				<span className="sub-section-list-item skills-item">
+				<span className="sub-section-list-item gear-item">
 					Field Notes
 				</span>
 			</div>
@@ -284,7 +284,10 @@ function About() {
   const onChangeSubSectionSkills = (isVisible) =>  {
 		if (isVisible) {
 			const timelineSubSectionSkills = new TimelineMax({ onComplete: cbSub });
-      animate.animateSubSectionSkills(timelineSubSectionSkills);
+			const subSectionSkills = document && document.getElementsByClassName('sub-about');
+			const skillsListItem = document && document.getElementsByClassName('skills-item');
+
+      animate.animateSubSectionSkills(timelineSubSectionSkills, subSectionSkills, skillsListItem);
       
 
       setSkillsActive(false);
@@ -294,7 +297,10 @@ function About() {
 	const onChangeSubSectionGear = (isVisible) => {
 		if (isVisible) {
 			const timelineSubSectionGear = new TimelineMax({ onComplete: cbSub });
-      animate.animateSubSectionTech(timelineSubSectionGear);
+			const subSectionTech = document && document.getElementsByClassName('sub-gear');
+			const techListItem = document && document.getElementsByClassName('gear-item');
+			animate.animateSubSectionTech(timelineSubSectionGear, subSectionTech, techListItem);
+
       
       setGearActive(false);
 		}
@@ -303,7 +309,9 @@ function About() {
 	const onChangeSubSectionTech = (isVisible) => {
 		if (isVisible) {
 			const timelineSubSectionTech = new TimelineMax({ onComplete: cbSub });
-      animate.animateSubSectionTech(timelineSubSectionTech);
+			const subSectionTech = document && document.getElementsByClassName('sub-tech');
+			const techListItem = document && document.getElementsByClassName('tech-item');
+      animate.animateSubSectionTech(timelineSubSectionTech, subSectionTech, techListItem);
       
       setTechActive(false);
 		}

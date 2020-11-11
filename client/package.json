@@ -10,8 +10,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "netlify": "netlify dev",
-    "prebuild": "netlify-lambda install"
+    "netlify": "netlify dev"
   },
   "repository": {
     "type": "git",
@@ -59,7 +58,7 @@
     "gatsby-transformer-sharp": "^2.5.21",
     "gsap": "^3.5.1",
     "isomorphic-fetch": "^3.0.0",
-    "netlify-cli": "^2.67.0",
+    "netlify-cli": "^2.68.4",
     "normalize.css": "^8.0.1",
     "onscreen": "^1.4.0",
     "query-string": "^6.13.7",
