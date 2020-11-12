@@ -7,9 +7,9 @@ const StyledFeaturedPost = styled.div`
   padding-top: 30px;
   display: flex;
   align-items: center;
-  gap: 30px;
+  /* gap: 30px; */
 
-  @supports not (gap: 30px) {
+  /* @supports not (gap: 30px) { */
     .col:first-of-type {
       padding-right: 30px;
 
@@ -17,7 +17,7 @@ const StyledFeaturedPost = styled.div`
         padding: 0 0 30px 0;
       }
     }
-  } 
+  /* }  */
 
 
   .col {
@@ -51,7 +51,7 @@ export default function FeaturedPost({ post }) {
         <h2>{post.frontmatter.title}</h2>
         <p>{post.excerpt}</p>
 
-        <div class="readMore">
+        <div className="readMore">
           <Link to={`/blog/${post.frontmatter.slug}`}>Read More</Link>
         </div>
       </div>

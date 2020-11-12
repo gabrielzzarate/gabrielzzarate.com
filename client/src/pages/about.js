@@ -248,13 +248,12 @@ function About() {
 			animate.animateAboutStart(introOne);
 			animate.animateAboutStart(introTwo);
 			animate.animateAboutStart(aboutHead);
-      // console.log('heading', heading, aboutLine);
-      // animate.animateHome(heading, aboutLine);
 		}
 		
     setSectionActive(true);
     setSkillsActive(true);
-    setTechActive(true);
+		setTechActive(true);
+		setGearActive(true);
   }, []);
 
   const onChangeSection = (isVisible) => {
@@ -264,13 +263,6 @@ function About() {
       setSectionActive(false);
     }
 	}
-	
-	// const onChangeAboutStart = (isVisible) => {
-  //   if (isVisible) {
-  //     animate.animateAboutStart();
-
-  //   }
-  // }
 
   const onChangeSubSectionSkills = (isVisible) =>  {
 		if (isVisible) {
