@@ -111,7 +111,6 @@ article {
 	text-transform: uppercase;
 	display: block;
 	color: var(--accent-text);
-	font-size: 1.8rem;
 	line-height: 1rem;
 }
 

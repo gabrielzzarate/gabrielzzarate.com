@@ -90,10 +90,18 @@ export default {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: `G-MKXV149D0Y`,
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: `G-MKXV149D0Y`,
+        trackingIds: [
+          "G-MKXV149D0Y",
+        ],
       },
     },
     // {
