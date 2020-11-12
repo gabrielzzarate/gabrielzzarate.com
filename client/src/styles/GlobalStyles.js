@@ -88,6 +88,10 @@ const GlobalStyles = createGlobalStyle`
     image-rendering: pixelated;
   }
 
+	.gatsby-resp-image-wrapper, .gatsby-image-wrapper {
+		border: 10px solid #fff;
+	}
+
   img {
     max-width: 100%;
   }
@@ -112,6 +116,19 @@ article {
 	display: block;
 	color: var(--accent-text);
 	line-height: 1rem;
+}
+
+figure {
+	display: block;
+	margin: 40px 0;
+}
+
+figcaption {
+	max-width: 480px;
+	font-size: .78rem;
+	margin: 0 auto;
+	padding-top: 1em;
+	font-family: var(--heading-font);
 }
 
 section {
