@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { TimelineMax } from 'gsap';
+import gsap, { TimelineMax } from 'gsap';
 import VisibilitySensor from 'react-visibility-sensor';
 import Heading from '../components/Heading';
 import animate from '../utils/animate';
 import PageWrapper from '../components/PageWrapper';
+import { CSSPlugin } from 'gsap/CSSPlugin'
 
+// Force CSSPlugin to not get dropped during build
+gsap.registerPlugin(CSSPlugin)
 
 const AboutPageStyles = styled.div`
 	.about-container {
