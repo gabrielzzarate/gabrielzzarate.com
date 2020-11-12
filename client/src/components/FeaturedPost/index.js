@@ -9,6 +9,16 @@ const StyledFeaturedPost = styled.div`
   align-items: center;
   gap: 30px;
 
+  @supports not (gap: 30px) {
+    .col:first-of-type {
+      padding-right: 30px;
+
+      @media screen and (max-width: 700px) {
+        padding: 0 0 30px 0;
+      }
+    }
+  } 
+
 
   .col {
     width: 50%;

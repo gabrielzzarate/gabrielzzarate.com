@@ -43,7 +43,7 @@ const Typography = createGlobalStyle`
   .metadata {
     font-family: var(--heading-font);
     color: var(--accent-text);
-    font-size: ${scale00}rem;
+    font-size: 0.96rem;
 
     a {
       color: var(--accent-text);

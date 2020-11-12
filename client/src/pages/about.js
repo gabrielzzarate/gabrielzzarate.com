@@ -13,15 +13,14 @@ const AboutPageStyles = styled.div`
 	}
 
 .about-intro-paragraph {
-	//padding-top: 200px;
 	visibility: hidden;
-    opacity: 0;
-    margin-bottom: 3rem;
-    /* @include font-size(25px);
+	opacity: 0;
+	margin-bottom: 3rem;
+	/* @include font-size(25px);
 
-    @include tablet-small {
-    	@include font-size(20px);
-    } */
+	@include tablet-small {
+		@include font-size(20px);
+	} */
 }
 
 .about-section {
@@ -41,9 +40,9 @@ const AboutPageStyles = styled.div`
 
 	.section-title {
 		display: inline-block;
-	    width: 40%;
-	    font-size: 2.6rem;
-	    transform-origin: center left 0;
+		width: 40%;
+		font-size: 2.6rem;
+		transform-origin: center left 0;
 
 	    /* @include desktop-small {
 	    	font-size: 2.2rem;
@@ -100,36 +99,28 @@ const AboutPageStyles = styled.div`
 .sub-section {
 	visibility: hidden;
 	opacity: 0;
-    // display: flex;
-    // -webkit-box-orient: horizontal;
-    // -webkit-box-direction: normal;
-    // -ms-flex-direction: row;
-    // flex-direction: row;
-    // -webkit-box-align: baseline;
-    // -ms-flex-align: baseline;
-    // align-items: baseline;
-    padding-bottom: 4.5rem;
-    padding-top: 4.5rem;
-    
+	padding-bottom: 4.5rem;
+	padding-top: 4.5rem;
+	
 
-    .sub-section-head {
-	    font-size: 1.2rem;
-	    letter-spacing: .4px;
-	    text-transform: uppercase;
-	    -webkit-transform-origin: center left 0;
-	    transform-origin: center left 0;
-    }
+	.sub-section-head {
+		font-size: 1.2rem;
+		letter-spacing: .4px;
+		text-transform: uppercase;
+		-webkit-transform-origin: center left 0;
+		transform-origin: center left 0;
+	}
 
-    .sub-section-list {
-	    font-size: 1.4rem;
-	    line-height: 1.5em;
-	    letter-spacing: .3px;
-	    color: #787878;
+	.sub-section-list {
+		font-size: 1.4rem;
+		line-height: 1.5em;
+		letter-spacing: .3px;
+		color: #787878;
 
-	    span {
-	    	display: block;
-	    }
-    }
+		span {
+			display: block;
+		}
+	}
 }
 
 .sub-section-title {
