@@ -93,8 +93,7 @@ export default {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // todo: add tracking id
-        // trackingId: `UA-176517-1`,
+        trackingId: `G-MKXV149D0Y`,
       },
     },
     // {
