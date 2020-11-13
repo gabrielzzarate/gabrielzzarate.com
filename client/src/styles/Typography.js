@@ -33,8 +33,9 @@ const Typography = createGlobalStyle`
   }
   h1 {
     font-size: ${scale2}rem;
+    margin-bottom: 15px;
   }
-  h2, h3 {
+  h2, h3, .h2 {
     font-size: ${scale1}rem;
   }
   h1, h2, h3, caption {
@@ -52,11 +53,11 @@ const Typography = createGlobalStyle`
   .body-text {
     font-family: var(--body-font);
   }
-  h1,h2,h3,h4,h5,h6 {
+  h1,h2,h3,h4,h5,h6, .h2 {
     font-weight: normal;
     line-height: 1;
     font-family: var(--heading-font), sans-serif;
-    margin: 0;
+    margin-top: 0;
   }
   
   a {
@@ -69,8 +70,17 @@ const Typography = createGlobalStyle`
     transition: all 0.2s;
     /* text-decoration-skip-ink: none; */
 
+    p {
+      font-family: var(--body-font);
+      color: var(--text);
+    }
+
     &:hover {
       color: var(--accent);
+
+      p {
+        color: var(--text);
+      }
     }
 
     &.underline {

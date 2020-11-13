@@ -104,6 +104,10 @@ const AboutPageStyles = styled.div`
 	opacity: 0;
 	padding-bottom: 4.5rem;
 	padding-top: 4.5rem;
+
+	@media screen and (max-width: 700px) {
+		padding: 3rem 0;
+	}
 	
 
 	.sub-section-head {
@@ -145,15 +149,29 @@ const AboutPageStyles = styled.div`
 .flex-forty {
 	flex-basis: 40%;
   max-width: 40%;
+
+	@media screen and (max-width: 700px) {
+		flex-basis: 50%;
+  	max-width: 50%;
+	}
 }
 
 .flex-sixty {
 	flex-basis: 60%;
   max-width: 60%;
+
+	@media screen and (max-width: 700px) {
+		flex-basis: 50%;
+  	max-width: 50%;
+	}
 }
 
 .intro-two {
-	margin-bottom: 200px;
+	margin-bottom: 150px;
+
+	@media screen and (max-width: 700px) {
+		margin-bottom: 100px;
+	}
 }
 
 .about-head {

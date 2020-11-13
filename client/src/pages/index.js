@@ -29,6 +29,11 @@ export default function HomePage({ data }) {
                 );
               })}
             </ArticleList>
+            <a className="cta-link" href="https://tinyletter.com/gabrielzzarate" target="_blank" rel="noreferrer">
+              <h2>
+              Sign up for <a className="underline">The Newsletter</a>
+						  </h2>
+            </a>
           </div>
         </section>
       </div>

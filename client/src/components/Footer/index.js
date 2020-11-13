@@ -18,10 +18,6 @@ const StyledFooter = styled.footer`
 
 	a {
 		color: #eeefe7;
-
-		&:hover {
-			color: var(--grey);
-		}
 	}
 
 	.copyrightWrapper {
@@ -39,6 +35,10 @@ const StyledFooter = styled.footer`
 
 	h2 {
 		margin-bottom: 0;
+	}
+
+	.mb-md {
+		margin-bottom: 60px;
 	}
 
 	@media screen and (max-width: 700px) {
@@ -71,8 +71,8 @@ export default function Footer() {
 			<ContentStyles>
 				<div className="row">
 					<div className="callout-content">
-						<h2>Get in touch with <a href="mailto:gabrielzzarate@gmail.com">Mail</a></h2><br />
-						<h2>or find me on <a href="https://github.com/gabrielzzarate" target="_blank" rel="noopener noreferrer"> Github</a> - <a href="https://twitter.com/gabrielzzarate" target="_blank" rel="noopener noreferrer">Twitter</a> - <a href="https://www.instagram.com/gabrielzzarate/" target="_blank" rel="noopener noreferrer">Instagram</a>
+						<h2>Get in touch with <a className="underline" href="mailto:gabrielzzarate@gmail.com">Mail</a>{' '} , <a className="underline" href="https://tinyletter.com/gabrielzzarate" target="_blank" rel="noreferrer">The Newsletter</a></h2><br />
+						<h2 className="mb-md">or find me on <a className="underline" href="https://github.com/gabrielzzarate" target="_blank" rel="noopener noreferrer"> Github</a> - <a className="underline" href="https://twitter.com/gabrielzzarate" target="_blank" rel="noopener noreferrer">Twitter</a> - <a className="underline" href="https://www.instagram.com/gabrielzzarate/" target="_blank" rel="noopener noreferrer">Instagram</a>
 						</h2>
 					</div>
 
@@ -81,6 +81,5 @@ export default function Footer() {
 					<span className="copyright">&copy; {new Date().getFullYear()} Gabriel Zarate</span>
 				</div>
 			</ContentStyles>
-		</StyledFooter>
-  )
+		</StyledFooter>)
 }

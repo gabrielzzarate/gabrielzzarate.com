@@ -18,6 +18,10 @@ const StyledArticleList = styled.section`
     display: block;
     padding: 2rem 0 1rem 0;
     border-bottom: 1px solid var(--text);
+
+    h2 {
+      margin-bottom: 0;
+    }
   }
 
   a {
