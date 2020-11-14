@@ -60,7 +60,6 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
         <Img image={post.frontmatter.image} alt={post.frontmatter.title} />
       </div>
       <PostHeaderStyles>
-        {/* <PostMetaTags post={post} /> */}
         <h1>{post.frontmatter.title}</h1>
         <div className="postMeta metadata">
           {' '} By Gabriel Zarate in <Link className="underline" to={`/blog/${post.frontmatter.category.toString().toLowerCase()}`}>{post.frontmatter.category.join(', ')}</Link>
