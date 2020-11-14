@@ -55,7 +55,7 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
 
     return (
     <section>
-      <SEO title={post.frontmatter.title} image={post?.frontmatter?.image?.asset?.fluid?.src} />
+      <SEO title={post.frontmatter.title} />
       <div className="postImage">
         <Img image={post.frontmatter.image} alt={post.frontmatter.title} />
       </div>
