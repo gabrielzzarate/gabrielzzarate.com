@@ -53,9 +53,12 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
     return <p>No Post Found? This should be a 404</p>;
   }
 
+
+  console.log('post', post);
+
     return (
     <section>
-      <SEO title={post.frontmatter.title} image={post?.frontmatter?.image?.publicUrl} description={post.excerpt} />
+      <SEO title={post.frontmatter.title} image={post?.frontmatter?.image?.publicURL} description={post.excerpt} />
       <div className="postImage">
         <Img image={post.frontmatter.image} alt={post.frontmatter.title} />
       </div>
