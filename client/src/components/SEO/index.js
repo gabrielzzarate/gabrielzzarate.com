@@ -26,7 +26,7 @@ export default function SEO({ children, location, description, title, image }) {
       <meta charSet="utf-8" />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image && `https://www.gabrielzzarate.com${image}` || '/logo.svg'} />
+      <meta property="og:image" content={`https://www.gabrielzzarate.com${image}` || '/logo.svg'} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta property="og:site_name" content={site.siteMetadata.title} />
       <meta property="og:description" content={description} key="ogdesc" />
