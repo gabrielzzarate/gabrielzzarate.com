@@ -35,6 +35,10 @@ const StyledFooter = styled.footer`
 
 	h2 {
 		margin-bottom: 0;
+
+		@media screen and (max-width: 700px) {
+			line-height: 1.4;
+		}
 	}
 
 	.mb-md {
@@ -43,6 +47,15 @@ const StyledFooter = styled.footer`
 
 	@media screen and (max-width: 700px) {
 		padding: 60px 1.5rem;
+	}
+
+
+	.showMobile {
+		display: none;
+
+		@media screen and (max-width: 480px) {
+			display: block;
+		}
 	}
 `;
 
@@ -71,8 +84,8 @@ export default function Footer() {
 			<ContentStyles>
 				<div className="row">
 					<div className="callout-content">
-						<h2>Get in touch with <a className="underline" href="mailto:gabrielzzarate@gmail.com">Mail</a>{' '} , <a className="underline" href="https://tinyletter.com/gabrielzzarate" target="_blank" rel="noreferrer">The Newsletter</a></h2><br />
-						<h2 className="mb-md">or find me on <a className="underline" href="https://github.com/gabrielzzarate" target="_blank" rel="noopener noreferrer"> Github</a> - <a className="underline" href="https://twitter.com/gabrielzzarate" target="_blank" rel="noopener noreferrer">Twitter</a> - <a className="underline" href="https://www.instagram.com/gabrielzzarate/" target="_blank" rel="noopener noreferrer">Instagram</a>
+						<h2>Get in touch with <a className="underline" href="mailto:gabrielzzarate@gmail.com">Mail</a>{' '}, <br className="showMobile" /> <a className="underline" href="https://tinyletter.com/gabrielzzarate" target="_blank" rel="noreferrer">The Newsletter</a></h2><br />
+						<h2 className="mb-md">or find me on <a className="underline" href="https://github.com/gabrielzzarate" target="_blank" rel="noopener noreferrer"> Github</a> - <br className="showMobile"/> <a className="underline" href="https://twitter.com/gabrielzzarate" target="_blank" rel="noopener noreferrer">Twitter</a> - <a className="underline" href="https://www.instagram.com/gabrielzzarate/" target="_blank" rel="noopener noreferrer">Instagram</a>
 						</h2>
 					</div>
 
