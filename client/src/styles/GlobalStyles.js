@@ -53,6 +53,10 @@ const GlobalStyles = createGlobalStyle`
 		--body-font: 'Freight Text Pro';
 		--mobile: '480px';
   }
+
+	* {
+		box-sizing: border-box;
+	}
   body {
 		min-height: 100vh;
 	 	overflow-y: auto;
@@ -810,6 +814,10 @@ section {
 
 	@media screen and (max-width: 700px) {
 		max-width: 400px;
+	}
+
+	@media screen and (max-width: 480px) {
+		max-width: 100%;
 	}
 
 	&:hover {

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import gsap, { TimelineMax } from 'gsap';
 import VisibilitySensor from 'react-visibility-sensor';
 import Heading from '../components/Heading';
+import SEO from '../components/SEO';
 import animate from '../utils/animate';
 import PageWrapper from '../components/PageWrapper';
 import { CSSPlugin } from 'gsap/CSSPlugin'
@@ -323,9 +324,9 @@ function About() {
   
   return (
 		<AboutPageStyles>
-			
     <PageWrapper>
 			<div className="about view">
+			<SEO title="About" />
 				{/* <section>
 					<h1>Gabriel Zarate</h1>
 				</section> */}

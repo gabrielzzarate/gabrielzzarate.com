@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import SEO from '../../components/SEO';
 import ArticleList from '../../components/ArticleList';
 
 const Blog = function ({ data, pageContext, path, location }, ...props) {
@@ -21,6 +22,7 @@ const Blog = function ({ data, pageContext, path, location }, ...props) {
           },
         }}
       /> */}
+      <SEO title="Blog" />
       <ArticleList heading={pageContext.category ? pageContext.category : 'All Articles'}>
         {data.allMdx &&
           data.allMdx.edges.map(function ({ node: post }) {

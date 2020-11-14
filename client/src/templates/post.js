@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import SEO from '../components/SEO';
 // import YouTube from 'react-youtube';
 // import { Helmet } from 'react-helmet';
 // import { IoLogoGithub } from 'react-icons/io';
@@ -54,6 +55,7 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
 
     return (
     <section>
+      <SEO title={post.frontmatter.title} image={post.frontmatter.image} />
       <div className="postImage">
         <Img image={post.frontmatter.image} alt={post.frontmatter.title} />
       </div>

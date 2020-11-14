@@ -2,6 +2,7 @@ import React from 'react';
 import PageWrapper from '../components/PageWrapper';
 import ArticleList from '../components/ArticleList';
 import FeaturedPost from '../components/FeaturedPost';
+import SEO from '../components/SEO';
 import { Link, graphql } from 'gatsby';
 
 export default function HomePage({ data }) {
@@ -9,6 +10,7 @@ export default function HomePage({ data }) {
   return (
     <PageWrapper>
       <div className="home view">
+      <SEO title="Home" />
         <section className="standard-section-padding home-section">
           <div className="container center-text">
             <FeaturedPost post={featuredPost} />
