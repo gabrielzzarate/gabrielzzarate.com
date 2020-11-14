@@ -55,11 +55,12 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
 
     return (
     <section>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={post.frontmatter.title} image={post?.frontmatter?.image?.asset?.fluid?.src} description={post.frontmatter.excerpt} />
       <div className="postImage">
         <Img image={post.frontmatter.image} alt={post.frontmatter.title} />
       </div>
       <PostHeaderStyles>
+        {/* <PostMetaTags post={post} /> */}
         <h1>{post.frontmatter.title}</h1>
         <div className="postMeta metadata">
           {' '} By Gabriel Zarate in <Link className="underline" to={`/blog/${post.frontmatter.category.toString().toLowerCase()}`}>{post.frontmatter.category.join(', ')}</Link>
