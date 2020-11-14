@@ -341,7 +341,7 @@ function About() {
 								custom interfaces and experiences.
 							</p>
 							<p className="about-intro-paragraph intro-two">
-								I work with a great team of people at <a className="underline body-text" href="http://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a>. I love my work because I have the
+								I work with a great team of people at <a className="underline body-text" href="http://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a>.erre I love my work because I have the
 								opportunity to make a difference by creatively solving
 								problems everyday.{' '}
 							</p>
