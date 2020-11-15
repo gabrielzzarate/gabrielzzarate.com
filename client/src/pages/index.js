@@ -14,7 +14,7 @@ export default function HomePage({ data }) {
         <section className="standard-section-padding home-section">
           <div className="container center-text">
             <FeaturedPost post={featuredPost} />
-            <ArticleList heading="Recent Articles">
+            <ArticleList heading="Recent Articles" articleNumber={data.allMdx.edges.length}>
               {data.allMdx && data.allMdx.edges.map(function ({ node: post }) {
                 if (post.frontmatter.id === featuredPost.frontmatter.id) {
                   return null;

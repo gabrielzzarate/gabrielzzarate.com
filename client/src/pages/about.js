@@ -9,7 +9,7 @@ import PageWrapper from '../components/PageWrapper';
 import { CSSPlugin } from 'gsap/CSSPlugin'
 
 // Force CSSPlugin to not get dropped during build
-gsap.registerPlugin(CSSPlugin)
+gsap.registerPlugin(CSSPlugin);
 
 const AboutPageStyles = styled.div`
 	.about-container {
@@ -140,6 +140,10 @@ const AboutPageStyles = styled.div`
 .sub-section-list-item {
 	color: var(--accent-text);
 	font-family: var(--heading-font);
+
+	a {
+		color: var(--accent-text);
+	}
 	
 }
 
@@ -184,12 +188,11 @@ p {
 }
 `;
 
-
 function cbSub() {
-	//console.log('sub ANIMATE');
+	return null;
 }
 
-function AboutSubSectionSkills(props) {
+function AboutSubSectionSkills() {
 	return (
 		<div className="sub-section flex-row sub-about">
 			<h3 className="flex-col flex-forty sub-section-title">Interests</h3>
@@ -206,13 +209,13 @@ function AboutSubSectionSkills(props) {
 				<span className="sub-section-list-item skills-item">
 					Keyboards
 				</span>
-				<span className="sub-section-list-item skills-item">Premier League &bull; Disc Golf</span>
+				<span className="sub-section-list-item skills-item"><a href="https://mancity.com" target="_blank" rel="noreferrer">MCFC</a> &bull; Disc Golf</span>
 			</div>
 		</div>
 	);
 }
 
-function AboutGear(props) {
+function AboutGear() {
 	return (
 		<div className="sub-section flex-row sub-gear">
 			<h3 className="flex-col flex-forty sub-section-title">Favorite Gear</h3>
@@ -341,7 +344,7 @@ function About() {
 								custom interfaces and experiences.
 							</p>
 							<p className="about-intro-paragraph intro-two">
-								I work with a great team of people at <a className="underline body-text" href="http://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a>.erre I love my work because I have the
+								I work with a great team of people at <a className="underline body-text" href="http://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a>. I love my work because I have the
 								opportunity to make a difference by creatively solving
 								problems everyday.{' '}
 							</p>
