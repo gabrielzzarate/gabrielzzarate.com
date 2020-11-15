@@ -52,7 +52,7 @@ export default function FeaturedPost({ post }) {
         <p>{post.excerpt}</p>
 
         <div className="readMore">
-          <Link to={`/blog/${post.frontmatter.slug}`}>Read More</Link>
+          <Link className="underline" to={`/blog/${post.frontmatter.slug}`}>Read More</Link>
         </div>
       </div>
     </StyledFeaturedPost>

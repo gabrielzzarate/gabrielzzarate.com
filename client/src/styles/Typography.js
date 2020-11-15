@@ -1,12 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-
-// import font from '../assets/fonts/Relevant-Normal.woff';
 import bodyFont from '../assets/fonts/freight-text-pro.woff';
 import headingFont from '../assets/fonts/ciutadella-regular.woff';
 
 const interval = 1.5;
 const scale0 = 1;
-const scale00 = (scale0 / interval) * 1.45;
+// const scale00 = (scale0 / interval) * 1.45;
 const scale1 = scale0 * interval;
 const scale2 = scale1 * interval;
 
@@ -83,18 +81,21 @@ const Typography = createGlobalStyle`
       }
     }
 
-    &.underline {
-      background-image: linear-gradient(to top, var(--accent) 0, var(--accent) .13169rem, rgba(255,102,140,0) .13169rem, rgba(255,102,140,0) 100%);
-    }
-  }
-  mark, .mark {
-    background: var(--yellow);
-    padding: 0 2px 2px 2px;
-    margin: 0;
-    display: inline;
-    line-height: 1;
   }
 
+  .underline {
+    background-image: linear-gradient(to top, var(--accent) 0, var(--accent) .13169rem, rgba(255,102,140,0) .13169rem, rgba(255,102,140,0) 100%);
+    transition: 0.25s;
+
+    &:hover {
+      color: var(--accent);
+
+      p {
+        color: var(--text);
+      }
+    }
+  }
+  
   .center {
     text-align: center;
   }
