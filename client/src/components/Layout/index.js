@@ -26,6 +26,8 @@ const ContentStyles = styled.div`
 `;
 
 export default function Layout({ children, noHeader = false }) {
+
+  console.log('noHead', noHeader);
 	return (
 		<>
 			<GlobalStyles />
