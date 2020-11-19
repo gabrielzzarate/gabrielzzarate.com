@@ -36,13 +36,22 @@ const Typography = createGlobalStyle`
   h2, h3, .h2 {
     font-size: ${scale1}rem;
   }
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.25 !important;
+    margin-bottom: 10px;
+  }
   h1, h2, h3, caption {
     font-feature-settings: "lnum" 1, "salt" 1;
   }
   .metadata {
     font-family: var(--heading-font);
     color: var(--accent-text);
-    font-size: 0.96rem;
+    font-size: 1rem;
+
+    &.large {
+      font-size: 1.25rem;
+    }
 
     a {
       color: var(--accent-text);

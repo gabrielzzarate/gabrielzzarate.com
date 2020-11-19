@@ -834,6 +834,10 @@ section {
 		color: #eeefe7;
 	}
 }
+
+.flex {
+  display: flex;
+}
 `;
 
 export default GlobalStyles;

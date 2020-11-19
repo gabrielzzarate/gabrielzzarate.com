@@ -25,13 +25,13 @@ const ContentStyles = styled.div`
   } 
 `;
 
-export default function Layout({ children }) {
+export default function Layout({ children, noHeader = false }) {
 	return (
 		<>
 			<GlobalStyles />
 			<Typography />
 				<ContentStyles>
-          <Header />
+          {!noHeader && <Header />}
 					{children}
 				</ContentStyles>
         <Footer />
