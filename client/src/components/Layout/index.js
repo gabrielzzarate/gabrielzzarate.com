@@ -25,9 +25,9 @@ const ContentStyles = styled.div`
   } 
 `;
 
-export default function Layout({ children, noHeader = false }) {
+export default function Layout({ children, noHeader = false }, ...props) {
 
-  console.log('noHead', noHeader);
+  console.log('noHead', noHeader, props);
 	return (
 		<>
 			<GlobalStyles />
