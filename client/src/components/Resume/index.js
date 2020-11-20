@@ -9,8 +9,17 @@ const StyledResume = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 40px;
 
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+
     .sub-section {
       padding-right: 5px;
+
+      @media screen and (max-width: 500px) {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
     }
   }
 
