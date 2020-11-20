@@ -144,7 +144,7 @@ export default function Resume() {
         <h4><a className="underline" href="https://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a> - <br className="mobileShow" />Brooklyn, NY. June 2018 - Present</h4>
         <span className="metadata">Software Engineer - Node, TypeScript, GraphQL, Apollo, Next</span>
 
-        <p>At First Street, I build and manage a variety of high-impact &amp; high-traffic products and sites. With a small team of developers, I am responsible for the full-stack of the application, writing GraphQL APIs in Node and Golang as well React client-side. I am our lead front-end engineer and have consistently used latest technologies to raise the bar in our organization to build fast, well-tested applications.</p>
+        <p>At First Street, I build and manage a variety of high-impact &amp; high-traffic products and sites. Working on a small team of developers, I am responsible for the full-stack of applications, writing GraphQL APIs in Node and Golang as well as React client-side. I am our lead front-end engineer and have consistently used latest technologies to raise the bar in our organization to build fast, well-tested applications.</p>
 
         <ul>
           <li>Built <a className="body-text underline" href="https://floodfactor.com" target="_blank" rel="noreferrer">Flood Factor</a> -- a flood damage visualization Next/GraphQL app which ingests data from the FSFAPI (one of the largest flood risk datasets in the country). Launched in July 2020, Flood Factor has over 1 million unique visitors with an average session duration of 3:14. I am currently building a new economic impact feature which will change how homebuyers view flood insurance and make big waves in the real estate industry.</li>
