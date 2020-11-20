@@ -2,10 +2,10 @@ import React from 'react';
 import Layout from './src/components/Layout';
 
 export function wrapPageElement({ element, props }) {
-  if (props && props.location  && props.location.pathname === '/resume') {
+  if (props && props.path && props.path === '/resume' || props.path === '/resume/') {
     console.log('props ssr', props);
     return (
-      <Layout noHeader {...props}>
+      <Layout noHeader={true} {...props}>
         {element}
       </Layout>
     )
