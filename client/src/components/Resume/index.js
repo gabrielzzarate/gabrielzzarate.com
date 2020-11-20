@@ -42,6 +42,10 @@ const StyledResume = styled.section`
     }
   }
 
+  li {
+    padding-bottom: 5px;
+  }
+
   @media screen and (max-width: 700px) {
     h4 {
       line-height: 1.5 !important;
@@ -145,9 +149,9 @@ export default function Resume() {
         <ul>
           <li>Built <a className="body-text underline" href="https://floodfactor.com" target="_blank" rel="noreferrer">Flood Factor</a> -- a flood damage visualization Next/GraphQL app which ingests data from the FSFAPI (one of the largest flood risk datasets in the country). Launched in July 2020, Flood Factor has over 1 million unique visitors with an average session duration of 3:14. I am currently building a new economic impact feature which will change how homebuyers view flood insurance and make big waves in the real estate industry.</li>
           <li>Built the <a href="https://firststreet.org/api/" target="_blank" rel="noreferrer" className="underline body-text">First Street Foundation API</a> and Development SDKs. Written in Go and launched in 2020, FSFAPI has received over 2 billion requests and has been integrated into a flood risk feature on <a className="body-text underline" href="https://realtor.com" target="_blank" rel="noreferrer">Realtor.com</a>.</li>
-          <li>Built a services platform for the FSFAPI -- <a className="body-text underline" href="https://firststreet.dev" target="_blank" rel="noreferrer">Firststreet.dev</a> is a secure platform built in Next where users can get access to API Keys and track their API Usage. It also includes an admin panel with CRUD functionality to manage new users, permissions, API services, and products</li>
-          <li>I lead the collboration between engineering and design teams, working together to create the best possible experiences</li>
-          <li>I consistently share new technologies with other engineers and seek to improve processes to make us more efficient.</li>
+          <li>Built a services platform for the FSFAPI -- <a className="body-text underline" href="https://firststreet.dev" target="_blank" rel="noreferrer">Firststreet.dev</a> is a secure platform built in Next where users can get access to API Keys and track their API Usage. It also includes an admin panel with CRUD functionality to manage new users, permissions, API services, and products.</li>
+          <li>I lead the collboration between engineering and design teams, working together to create the best possible interfaces and experiences.</li>
+          <li>I consistently share new technologies with other engineers and seek to improve team processes to make us more efficient.</li>
         </ul>
       </div>
 
