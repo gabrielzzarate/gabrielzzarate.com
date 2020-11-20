@@ -69,7 +69,7 @@ export default function Resume() {
           <div className="detail-links">
             <a href="https://github.com/gabrielzzarate" target="_blank" rel="noreferrer" className="underline">Github</a>
             <a href="mailto:gabrielzzarate" className="underline">Mail</a> 
-            <a href="tel:977-909-6042" className="underline">Phone</a>
+            <a href="tel:929-977-6042" className="underline">Phone</a>
           </div>
         </div>
 
@@ -140,23 +140,23 @@ export default function Resume() {
         <h4><a className="underline" href="https://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a> - <br className="mobileShow" />Brooklyn, NY. June 2018 - Present</h4>
         <span className="metadata">Software Engineer - Node, TypeScript, GraphQL, Apollo, Next</span>
 
-        <p>At First Street, I build and manage a variety of high-impact &amp; high-traffic products and sites. With a small team of developer, I am responsible for the full-stack of the application, writing GraphQL APIs in Node and Golang as well as managing the client-side. I am our lead front-end engineer and have consistently used latest technologies to raise the bar on the client to built fast, well-tested applications.</p>
+        <p>At First Street, I build and manage a variety of high-impact &amp; high-traffic products and sites. With a small team of developers, I am responsible for the full-stack of the application, writing GraphQL APIs in Node and Golang as well React client-side. I am our lead front-end engineer and have consistently used latest technologies to raise the bar in our organization to build fast, well-tested applications.</p>
 
         <ul>
-          <li>Built <a className="body-text underline" href="https://floodfactor.com" target="_blank" rel="noreferrer">Flood Factor</a> -- a flood damage visualization Next/GraphQL app which that data from the FSFAPI (one of the largest flood risk datasets in the country). Launched in July 2020, Flood Factor has over 1 million unique visitors with an average session duration of 3:14. I am currently building a new economic impact feature which will change how homebuyers view flood insurance and make a big waves in the real estate industry.</li>
+          <li>Built <a className="body-text underline" href="https://floodfactor.com" target="_blank" rel="noreferrer">Flood Factor</a> -- a flood damage visualization Next/GraphQL app which ingests data from the FSFAPI (one of the largest flood risk datasets in the country). Launched in July 2020, Flood Factor has over 1 million unique visitors with an average session duration of 3:14. I am currently building a new economic impact feature which will change how homebuyers view flood insurance and make big waves in the real estate industry.</li>
           <li>Built the <a href="https://firststreet.org/api/" target="_blank" rel="noreferrer" className="underline body-text">First Street Foundation API</a> and Development SDKs. Written in Go and launched in 2020, FSFAPI has received over 2 billion requests and has been integrated into a flood risk feature on <a className="body-text underline" href="https://realtor.com" target="_blank" rel="noreferrer">Realtor.com</a>.</li>
-          <li>Built a services platform for the FSFAPI -- <a className="body-text underline" href="https://firststreet.dev" target="_blank" rel="noreferrer">Firststreet.dev</a> is a secure platform built in Next where users can get access to API Keys and track their API Usage. It also includes an admin panel with CRUD functionality to manage new users, permissions, api services, and products</li>
+          <li>Built a services platform for the FSFAPI -- <a className="body-text underline" href="https://firststreet.dev" target="_blank" rel="noreferrer">Firststreet.dev</a> is a secure platform built in Next where users can get access to API Keys and track their API Usage. It also includes an admin panel with CRUD functionality to manage new users, permissions, API services, and products</li>
           <li>I lead the collboration between engineering and design teams, working together to create the best possible experiences</li>
-          <li>I consistently share new technologies I have learned with other engineers and seek to improve processes to make us more efficient.</li>
+          <li>I consistently share new technologies with other engineers and seek to improve processes to make us more efficient.</li>
         </ul>
       </div>
 
       <div className="resume-section">
-        <h4><a className="underline" href="https://vertdigial.com" target="_blank" rel="noreferrer">Vert Digital</a> - <br className="mobileShow"/> Atlanta, GA. June 2016 - June 2018</h4>
+        <h4><a className="underline" href="https://vertdigital.com" target="_blank" rel="noreferrer">Vert Digital</a> - <br className="mobileShow"/> Atlanta, GA. June 2016 - June 2018</h4>
         <span className="metadata">Front-End Developer - Wordpress, React, Redux</span>
 
         <p>
-          At Vert Digital, I lead our React/Redux projects and wrote custom web experiences in PHP and Wordpress. I developed digital marketing products for several large clients including NBC Universal and SweetWater Brewing.
+          At Vert Digital, I led our React/Redux projects and wrote custom web experiences in PHP and Wordpress. I developed digital marketing products for several large clients including NBC Universal and SweetWater Brewing.
         </p>
 
         <ul>
