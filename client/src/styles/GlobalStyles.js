@@ -122,17 +122,30 @@ article {
 	line-height: 1.2rem;
 }
 
+
 figure {
 	display: block;
-	margin: 40px 0;
+	width: 100%;
+	margin: 40px auto;
 }
 
 figcaption {
-	max-width: 480px;
 	font-size: 0.9rem;
-	margin: 0 auto;
 	padding-top: 1em;
 	font-family: var(--heading-font);
+
+	&.maxWidth {
+		max-width: 640px;
+		margin: 0 auto;
+	}
+}
+
+
+// hide anchor icon in posts 
+.hash-anchor {
+	svg {
+		display: none;
+	}
 }
 
 section {

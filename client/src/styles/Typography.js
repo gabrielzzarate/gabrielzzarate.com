@@ -36,6 +36,9 @@ const Typography = createGlobalStyle`
   h2, h3, .h2 {
     font-size: ${scale1}rem;
   }
+  h3 {
+    margin-top: 30px !important;
+  }
   h4 {
     font-size: 1.25rem;
     line-height: 1.25 !important;
