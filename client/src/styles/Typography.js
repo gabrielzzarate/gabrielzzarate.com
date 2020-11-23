@@ -24,7 +24,7 @@ const Typography = createGlobalStyle`
   }
   body {
     font-size: ${scale0}rem;
-    line-height: 1.35;
+    line-height: 1.45;
   }
   p, li {
     letter-spacing: 0.5px;

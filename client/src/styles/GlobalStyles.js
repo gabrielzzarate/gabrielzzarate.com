@@ -105,11 +105,13 @@ const GlobalStyles = createGlobalStyle`
 // layout
 
 article {
-
 	p {
-		font-size: 1.1rem;
-	}
+		font-size: 20px;
 
+		@media screen and (max-width: 900px) {
+			font-size: 18px;
+		}
+	}
 	h2 {
 		margin-top: 20px;
 	}
