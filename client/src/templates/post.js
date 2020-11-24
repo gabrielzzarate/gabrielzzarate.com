@@ -3,16 +3,7 @@ import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import SEO from '../components/SEO';
-// import YouTube from 'react-youtube';
-// import { Helmet } from 'react-helmet';
-// import { IoLogoGithub } from 'react-icons/io';
 import Img from '../components/Img';
-// import Img from '../components/Img';
-// import H from '../components/mdxComponents/Headings';
-// import ContentNav from '../components/ContentNav';
-// import PostHeaderStyles from '../components/styles/PostHeaderStyles';
-// import EditDialogStyles from '../components/styles/EditDialogStyles';
-// import { PostMetaTags } from '../components/MetaTags';
 import { FaFacebookF, FaTwitter, } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import Share from '../components/Share';
@@ -72,9 +63,6 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
           <div>
             <time dateTime={post.frontmatter.date}>{post.frontmatter.date}</time>
           </div>
-          {/* <a rel="noopener noreferrer" target="_blank" href={editURL}>
-            Edit Post <IoLogoGithub />
-          </a> */}
         </div>
       </PostHeaderStyles>
       <PostBody>
@@ -90,37 +78,17 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
         <a onClick={() => {
           const link = `https://www.facebook.com/sharer/share.php?u=`;
           return share('', link, 'Facebook', post.frontmatter.title);
-        }}><FaFacebookF /></a>
+        }} target="_blank" rel="noreferrer"><FaFacebookF /></a>
     
         <a onClick={() => {
           const link = `https://twitter.com/intent/tweet/?${post && post.frontmatter ? `text=${post.frontmatter.title}&` : ''}url=`;
 
           return share('', link, 'Twitter', post.frontmatter.title);
-        }}><FaTwitter /></a>
+        }} target="_blank" rel="noreferrer"><FaTwitter /></a>
         <a onClick={() => {
           window.location.href = `mailto:?subject=${post && post.frontmatter ? `Check out ${post.frontmatter.title}` : 'Checkout this article from gabrielzzarate.com!'}&body=${window.location.href}`;
         }}><FiMail /></a> 
       </Share>
-      {/* <EditDialogStyles>
-        <p>
-          Find an issue with this post? Think you could clarify, update or add
-          something?
-        </p>
-        <p>
-          All my posts are available to edit on Github. Any fix, little or
-          small, is appreciated!
-        </p>
-        <p>
-          <a rel="noopener noreferrer" target="_blank" href={editURL}>
-            <IoLogoGithub /> Edit on Github
-          </a>
-        </p>
-      </EditDialogStyles> */}
-      {/* <ContentNav
-        pathPrefix={pageContext.pathPrefix}
-        prev={pageContext.prev}
-        next={pageContext.next}
-      /> */}
     </section>
   );
 }
