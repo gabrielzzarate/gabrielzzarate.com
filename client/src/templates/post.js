@@ -77,7 +77,7 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
       <Share> 
         <a onClick={() => {
           const link = `https://www.facebook.com/sharer/share.php?u=`;
-          return share('', link, 'Facebook', post.frontmatter.title);
+          return share(window.location.href, link, 'Facebook', post.frontmatter.title);
         }} target="_blank" rel="noreferrer"><FaFacebookF /></a>
     
         <a onClick={() => {
