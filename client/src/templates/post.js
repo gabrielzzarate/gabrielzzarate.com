@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import YouTube from 'react-youtube';
 import SEO from '../components/SEO';
 import Img from '../components/Img';
 import { FaFacebookF, FaTwitter, } from 'react-icons/fa';
@@ -32,7 +33,7 @@ export const pageQuery = graphql`
       frontmatter {
         slug
         title
-        date(formatString: "DD MMMM, YYYY")
+        date(formatString: "DD MMMM YYYY")
         category
          image {
           ...ImageFields
@@ -68,6 +69,7 @@ function PostTemplate({ data: { mdx: post }, scope, pageContext }) {
       <PostBody>
         <MDXRenderer
           scope={{
+            YouTube,
             ...scope,
           }}
           >

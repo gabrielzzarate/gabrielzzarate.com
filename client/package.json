@@ -70,6 +70,7 @@
     "react-on-screen": "^2.1.1",
     "react-transition-group": "^4.4.1",
     "react-visibility-sensor": "^5.1.1",
+    "react-youtube": "^7.13.0",
     "styled-components": "^5.2.1",
     "use-query-params": "^1.1.9"
   },

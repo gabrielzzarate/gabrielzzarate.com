@@ -115,6 +115,20 @@ article {
 	h2 {
 		margin-top: 20px;
 	}
+
+	a {
+		font-family: var(--body-font);
+		background-image: linear-gradient(to top, var(--accent) 0, var(--accent) .13169rem, rgba(255,102,140,0) .13169rem, rgba(255,102,140,0) 100%);
+    transition: 0.25s;
+
+    &:hover {
+      color: var(--accent);
+
+      p {
+        color: var(--text);
+      }
+    }
+	}
 }
 
 .postDate {
