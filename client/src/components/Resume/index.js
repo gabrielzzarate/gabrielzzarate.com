@@ -27,6 +27,7 @@ const StyledResume = styled.section`
     margin-bottom: 40px;
   }
 
+
   .detail-links {
     display: flex;
     color: var(--accent-text);
@@ -70,19 +71,19 @@ const StyledResume = styled.section`
   }
 `;
 
-export default function Resume() {
+export default function Resume({ showDetails = false }) {
 
   return (
     <StyledResume className="standard-section-padding">      
       <header>
         <SEO title="Gabriel Zarate" description="I'm a software engineer living in Brooklyn specializing in front-end development. I enjoy working with the latest web technologies to bridge the gap between complex software and creative design to create custom interfaces and experiences." image="https://www.gabrielzzarate.com/gabriel.jpeg" />
         <h1>Gabriel Zarate</h1>
-        <div className="details">
+        <div className={showDetails ? 'details inlineDetails' : 'details'}>
           <span className="metadata large">Software Engineer</span> 
           <div className="detail-links">
-            <a href="https://github.com/gabrielzzarate" target="_blank" rel="noreferrer" className="underline">Github</a>
-            <a href="mailto:gabrielzzarate" className="underline">Mail</a> 
-            <a href="tel:929-977-6042" className="underline">Phone</a>
+            <a href="https://github.com/gabrielzzarate" target="_blank" rel="noreferrer" className="underline">Github{ showDetails && ': @gabrielzzarate'}</a>
+            <a href="mailto:gabrielzzarate" className="underline">Mail{ showDetails && ': gabrielzzarate@gmail.com'}</a> 
+            <a href="tel:929-977-6042" className="underline">Phone{ showDetails && ': 929.977.6042'}</a>
           </div>
         </div>
 
@@ -151,7 +152,7 @@ export default function Resume() {
       <h2>Experience</h2>
       <div className="resume-section">
         <h4><a className="underline" href="https://firststreet.org" target="_blank" rel="noreferrer">First Street Foundation</a> - <br className="mobileShow" />Brooklyn, NY. June 2018 - Present</h4>
-        <span className="metadata">Software Engineer - Node, TypeScript, GraphQL, Apollo, Next</span>
+        <span className="metadata">Lead Frontend Engineer - Node, TypeScript, GraphQL, Apollo, Next</span>
 
         <p>At First Street, I build and manage a variety of high-impact &amp; high-traffic products and sites. Working on a small team of developers, I am responsible for the full-stack of applications, writing GraphQL APIs in Node and Golang as well as React client-side. I am our lead front-end engineer and have consistently used latest technologies to raise the bar in our organization to build fast, well-tested applications.</p>
 
@@ -179,6 +180,5 @@ export default function Resume() {
           <li>Gained experience in mentoring junior developers.</li>
         </ul>
       </div>
-    </StyledResume>
-  )
+    </StyledResume>  )
 }
