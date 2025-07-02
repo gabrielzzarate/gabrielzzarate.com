@@ -1,6 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
-import bodyFont from '../assets/fonts/freight-text-pro.woff';
-import headingFont from '../assets/fonts/ciutadella-regular.woff';
+import { createGlobalStyle } from "styled-components";
 
 const interval = 1.5;
 const scale0 = 1;
@@ -9,14 +7,6 @@ const scale1 = scale0 * interval;
 const scale2 = scale1 * interval;
 
 const Typography = createGlobalStyle`
-  @font-face {
-    font-family: 'Freight Text Pro';
-    src: url(${bodyFont});
-  }
-  @font-face {
-    font-family: Ciutadella;
-    src: url(${headingFont});
-  }
   html {
     font-family: var(--body-font), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--text);
@@ -69,7 +59,7 @@ const Typography = createGlobalStyle`
     font-family: var(--heading-font), sans-serif;
     margin-top: 0;
   }
-  
+
   a {
     color: var(--text);
     font-family: var(--heading-font);
@@ -107,7 +97,7 @@ const Typography = createGlobalStyle`
       }
     }
   }
-  
+
   .center {
     text-align: center;
   }

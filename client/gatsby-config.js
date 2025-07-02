@@ -1,20 +1,20 @@
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 
-dotenv.config({ path: '.env' });
+dotenv.config({ path: ".env" });
 
 export default {
   siteMetadata: {
     title: `Gabriel Zarate`,
-    author: 'Gabriel Zarate',
-    siteUrl: 'https://gabrielzzarate.me',
-    description: 'The Gabriel Zarate Blog',
-    twitter: '@gabrielzzarate',
-    instagram: '@gabrielzzarate',
+    author: "Gabriel Zarate",
+    siteUrl: "https://gabrielzzarate.me",
+    description: "The Gabriel Zarate Blog",
+    twitter: "@gabrielzzarate",
+    instagram: "@gabrielzzarate",
   },
   plugins: [
-    'gatsby-plugin-styled-components',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-use-query-params',
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-use-query-params",
     {
       // This tells us where the plugin lives
       // this one is in our node_modules
@@ -22,32 +22,25 @@ export default {
       // these are plugin-specific options - see docs for each plugin if you want to know what the options are
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'page',
+        name: "page",
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/posts`,
-        name: 'post',
+        name: "post",
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `fonts`,
-        path: `${__dirname}/src/assets/fonts`,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       options: {
         root: __dirname,
         gatsbyRemarkPlugins: [
-          'gatsby-remark-embedder',
-          'gatsby-remark-copy-linked-files',
+          "gatsby-remark-embedder",
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1500,
               linkImagesToOriginal: false,
@@ -55,7 +48,7 @@ export default {
             },
           },
           {
-            resolve: 'gatsby-remark-autolink-headers',
+            resolve: "gatsby-remark-autolink-headers",
             options: {
               maintainCase: true,
               icon: `<svg aria-hidden="true" height="20" version="1.1" viewBox="0 0 16 16" width="20"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg>`,
@@ -63,8 +56,8 @@ export default {
               className: `hash-anchor`,
             },
           },
-        ]
-      }
+        ],
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -84,7 +77,7 @@ export default {
             },
           },
           // 'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          "gatsby-remark-smartypants",
         ],
       },
     },
@@ -99,9 +92,7 @@ export default {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-MKXV149D0Y",
-        ],
+        trackingIds: ["G-MKXV149D0Y"],
       },
     },
     // {
