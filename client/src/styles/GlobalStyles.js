@@ -1,38 +1,38 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 // const colors = ['#f1eee5', '#eeefe8', '#f5f0e', '#f3eee', '#f3eeed', '#eef1ef'];
 
 const palettes = [
-	{
-		background: '#eef1ef',
-		text: '#665d79',
-		accentText: '#7eae8e',
-		accent: '#fa7538',
-	},
-	{
-		background: '#eaeff1',
-		text: '#6b4d47',
-		accentText: '#6f939f',
-		accent: '#f66',
-	},
-	{
-		background: '#eeefe7',
-		text: '#614e65',
-		accentText: '#919749',
-		accent: '#614e65',
-	},
-	{
-		background: '#f5f0e0',
-		text: '#74586a',
-		accentText: '#bf986e',
-		accent: '#ed6e87',
-	},
-	{
-		background: '#e0d7cc',
-		text: '#74586a',
-		accentText: '#bf986e',
-		accent: "#f4a4b4",
-	}
+  {
+    background: "#eef1ef",
+    text: "#665d79",
+    accentText: "#7eae8e",
+    accent: "#fa7538",
+  },
+  {
+    background: "#eaeff1",
+    text: "#6b4d47",
+    accentText: "#6f939f",
+    accent: "#f66",
+  },
+  {
+    background: "#eeefe7",
+    text: "#614e65",
+    accentText: "#919749",
+    accent: "#614e65",
+  },
+  {
+    background: "#f5f0e0",
+    text: "#74586a",
+    accentText: "#bf986e",
+    accent: "#ed6e87",
+  },
+  {
+    background: "#e0d7cc",
+    text: "#74586a",
+    accentText: "#bf986e",
+    accent: "#f4a4b4",
+  },
 ];
 const randomPalette = palettes[Math.floor(Math.random() * palettes.length)];
 // const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -49,8 +49,8 @@ const GlobalStyles = createGlobalStyle`
 		--text: ${randomPalette.text};
 		--accent: ${randomPalette.accent};
 		--accent-text: ${randomPalette.accentText};
-		--heading-font: Ciutadella;
-		--body-font: 'Freight Text Pro';
+		--heading-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;;
+		--body-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;;
 		--mobile: '480px';
   }
 
@@ -157,7 +157,7 @@ figcaption {
 }
 
 
-// hide anchor icon in posts 
+// hide anchor icon in posts
 .hash-anchor {
 	svg {
 		display: none;
